@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dataset_Tempus_Hours_TIC"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "53f42536-1a8c-8845-4d0d-31059519a433"
+  }
+}
