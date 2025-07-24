@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dataset_OTL_Hours"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cf10e957-8b48-99ca-4759-b19cd3845bdd"
+  }
+}
