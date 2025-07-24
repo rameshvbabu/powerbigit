@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Credit_Dataset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d43fecc6-ae0a-b677-432e-d69255852a47"
+  }
+}

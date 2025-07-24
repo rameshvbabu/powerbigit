@@ -1,0 +1,96 @@
+{
+  "config": "{\"version\":\"5.27\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.28\",\"type\":2},\"customTheme\":{\"name\":\"UL_Basic5028473330666741.json\",\"version\":\"5.28\",\"type\":1}},\"activeSectionIndex\":1,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"allowDataPointLassoSelect\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "filters": "[]",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "UL_Basic5028473330666741.json",
+            "path": "UL_Basic5028473330666741.json",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[{\"name\":\"Filterf161ddb122b4d08030e7\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"order_header_status\"}},\"type\":\"Categorical\",\"howCreated\":1},{\"name\":\"Filter0e657faf38bbc5ec5b08\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"flow_status_code\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{}}]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"9a9b448c82fa8ce6bef3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":11.374803972817563,\"y\":428.89702038682697,\"z\":1000,\"width\":744.7151071615264,\"height\":291.06116048092}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Fact.Order Hold Count\"},{\"queryRef\":\"Sum(fact_agg_sales_order_hold.Hold_Age1)\"},{\"queryRef\":\"Sum(fact_open_ar.ar_glbl_amt)\"},{\"queryRef\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"queryRef\":\"fact_sales_order_line.order_hold_amount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"Fact\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_agg_sales_order_hold\",\"Type\":0},{\"Name\":\"f2\",\"Entity\":\"fact_open_ar\",\"Type\":0},{\"Name\":\"f3\",\"Entity\":\"fact_sales_order_line\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Order Hold Count\"},\"Name\":\"Fact.Order Hold Count\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"Hold_Age\"}},\"Function\":1},\"Name\":\"Sum(fact_agg_sales_order_hold.Hold_Age1)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f2\"}},\"Property\":\"ar_glbl_amt\"}},\"Function\":0},\"Name\":\"Sum(fact_open_ar.ar_glbl_amt)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f2\"}},\"Property\":\"ar_remaining_glbl_amt\"}},\"Function\":0},\"Name\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f3\"}},\"Property\":\"order_hold_amount\"},\"Name\":\"fact_sales_order_line.order_hold_amount\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 291.06,
+          "width": 744.71,
+          "x": 11.37,
+          "y": 428.89,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"ec693a74464744ab8bc9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10.773277222514466,\"y\":0,\"z\":0,\"width\":1115.0341925302473,\"height\":360.23145712782747}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_customer_account.Cust_Name_Acctnum\"},{\"queryRef\":\"Sum(fact_open_ar.ar_glbl_amt)\"},{\"queryRef\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"queryRef\":\"Sum(fact_sales_order_line.Order_Amount)\"},{\"queryRef\":\"fact_sales_order_line.Order_Amount\"},{\"queryRef\":\"fact_sales_order_line.order_hold_amount\"},{\"queryRef\":\"dim_customer_account.dim_id\"},{\"queryRef\":\"Sum(dim_customer_account.cust_credit_limit_usd)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"fact_open_ar\",\"Type\":0},{\"Name\":\"f1\",\"Entity\":\"fact_sales_order_line\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_customer_account\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ar_glbl_amt\"}},\"Function\":0},\"Name\":\"Sum(fact_open_ar.ar_glbl_amt)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ar_remaining_glbl_amt\"}},\"Function\":0},\"Name\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"order_hold_amount\"},\"Name\":\"fact_sales_order_line.order_hold_amount\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Order_Amount_all\"}},\"Function\":0},\"Name\":\"Sum(fact_sales_order_line.Order_Amount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"dim_id\"},\"Name\":\"dim_customer_account.dim_id\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Cust_Name_Acctnum\"},\"Name\":\"dim_customer_account.Cust_Name_Acctnum\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"cust_credit_limit_usd\"}},\"Function\":0},\"Name\":\"Sum(dim_customer_account.cust_credit_limit_usd)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Open_Order_Amount\"},\"Name\":\"fact_sales_order_line.Order_Amount\"}]},\"drillFilterOtherVisuals\":true,\"filterSortOrder\":3}}",
+          "filters": "[{\"name\":\"Filter6ee3e18eccc5995bb362\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"flow_status_code\"}},\"type\":\"Categorical\",\"howCreated\":1,\"objects\":{},\"ordinal\":0},{\"name\":\"Filter34b7d385142253e941cd\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_open_ar\"}},\"Property\":\"ar_glbl_amt\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":1},{\"name\":\"Filter280a62f4348ef8348c96\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_open_ar\"}},\"Property\":\"ar_remaining_glbl_amt\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":2},{\"name\":\"Filtercbb2662d2a69df751f1b\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"Order_Amount_all\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":3},{\"name\":\"Filter931d966039b69946e3d5\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"order_hold_amount\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":4},{\"name\":\"Filter02541b24711a66ac7ff0\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer_account\"}},\"Property\":\"account_num\"}},\"type\":\"Categorical\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":5},{\"name\":\"Filter74df9acab5598e025857\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer\"}},\"Property\":\"customer_name\"}},\"type\":\"Advanced\",\"howCreated\":1,\"ordinal\":6},{\"name\":\"Filter0fc71583d8c4a7233608\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer_account\"}},\"Property\":\"dim_id\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":7},{\"name\":\"Filter12d0d661137aff0f30e3\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer_account\"}},\"Property\":\"name\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"d1\",\"Entity\":\"dim_customer_account\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"name\"}},\"Right\":{\"Literal\":{\"Value\":\"'LENOVO (BEIJING) LTD'\"}}}}}]},\"type\":\"Advanced\",\"howCreated\":1,\"isHiddenInViewMode\":false,\"ordinal\":8},{\"name\":\"Filtere683c8357acfe8726461\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer_account\"}},\"Property\":\"Cust_Name_Acctnum\"}},\"type\":\"Categorical\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":9},{\"name\":\"Filter6ac93edb0c94c11cd768\",\"expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_customer_account\"}},\"Property\":\"cust_credit_limit_usd\"}},\"Function\":0}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":10},{\"name\":\"Filtera54f0dc7eb5ea92aeece\",\"expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"fact_sales_order_line\"}},\"Property\":\"Open_Order_Amount\"}},\"type\":\"Advanced\",\"howCreated\":0,\"isHiddenInViewMode\":false,\"ordinal\":11}]",
+          "height": 360.23,
+          "width": 1115.03,
+          "x": 10.77,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Page 2",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSectionb211ba61f43cc2b5b6d2",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"62ea8de142129c57620c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":987.1186440677966,\"y\":242.03389830508473,\"z\":1,\"width\":292.88135593220335,\"height\":220.33898305084745}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"fact_agg_sales_order_hold.hold_type\"},{\"queryRef\":\"Avg(fact_agg_sales_order_hold.Hold_Age)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f1\",\"Entity\":\"fact_agg_sales_order_hold\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Hold_Age\"}},\"Function\":1},\"Name\":\"Avg(fact_agg_sales_order_hold.Hold_Age)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"hold_type\"},\"Name\":\"fact_agg_sales_order_hold.hold_type\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Hold_Age\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 220.33,
+          "width": 292.88,
+          "x": 987.11,
+          "y": 242.03,
+          "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"b11054b0054da32e3010\",\"layouts\":[{\"id\":0,\"position\":{\"x\":18.983050847457626,\"y\":169.4915254237288,\"z\":0,\"width\":879.322033898305,\"height\":480.6779661016949}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_customer_account.Cust_Name_Acctnum\"},{\"queryRef\":\"Sum(dim_customer_account.cust_credit_limit_usd)\"},{\"queryRef\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"queryRef\":\"fact_sales_order_line.Order_Amount\"},{\"queryRef\":\"fact_sales_order_line.order_hold_amount\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_customer_account\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"fact_open_ar\",\"Type\":0},{\"Name\":\"f1\",\"Entity\":\"fact_sales_order_line\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"cust_credit_limit_usd\"}},\"Function\":0},\"Name\":\"Sum(dim_customer_account.cust_credit_limit_usd)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ar_remaining_glbl_amt\"}},\"Function\":0},\"Name\":\"Sum(fact_open_ar.ar_remaining_glbl_amt)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"order_hold_amount\"},\"Name\":\"fact_sales_order_line.order_hold_amount\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"Open_Order_Amount\"},\"Name\":\"fact_sales_order_line.Order_Amount\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Cust_Name_Acctnum\"},\"Name\":\"dim_customer_account.Cust_Name_Acctnum\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f1\"}},\"Property\":\"order_hold_amount\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"196.47457627118646D\"}}}},\"selector\":{\"metadata\":\"dim_customer_account.Cust_Name_Acctnum\"}}]}}}",
+          "filters": "[]",
+          "height": 480.67,
+          "width": 879.32,
+          "x": 18.98,
+          "y": 169.49,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "UL_Basic5028473330666741.json"
+}
