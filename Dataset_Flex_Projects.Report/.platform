@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Dataset_Flex_Projects"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "84f2300b-5603-9323-49d9-a870b91422a7"
+  }
+}

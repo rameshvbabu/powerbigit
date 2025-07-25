@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.27\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY21SU11\",\"version\":\"5.28\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY21SU11",
+            "path": "BaseThemes/CY21SU11.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"outspacePane\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"181L\"}}}}}]}}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"8df3ed153e182f95e3f9\",\"layouts\":[{\"id\":0,\"position\":{\"x\":51.7752808988764,\"y\":0,\"z\":0,\"width\":1228.2247191011236,\"height\":289.55805243445695}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Facts - Forecast.ProjectedRevenuePhaseAmount)\"},{\"queryRef\":\"Avg(Facts - Forecast.ProjectedRevenuePhasePercentageComplete)\"},{\"queryRef\":\"Avg(Facts - Forecast.RevenuePhaseDuration)\"},{\"queryRef\":\"Avg(Facts - Forecast.RevenuePhasePercentage)\"},{\"queryRef\":\"Avg(Facts - Forecast.TotallineAmount)\"},{\"queryRef\":\"Sum(Facts - Forecast.RevenuePhaseAmount)\"},{\"queryRef\":\"Dates - Forecast.Forecast Year\"},{\"queryRef\":\"Dates - Forecast.Forecast Date\"},{\"queryRef\":\"Facts - Forecast.OracleProjectNumber\"},{\"queryRef\":\"Dim - Order Details.Project Number\"},{\"queryRef\":\"Dim - Order Details.Parent Line Number\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"Facts - Forecast\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"Dates - Forecast\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"Dim - Order Details\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ProjectedRevenuePhaseAmount\"}},\"Function\":0},\"Name\":\"Sum(Facts - Forecast.ProjectedRevenuePhaseAmount)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"ProjectedRevenuePhasePercentageComplete\"}},\"Function\":1},\"Name\":\"Avg(Facts - Forecast.ProjectedRevenuePhasePercentageComplete)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RevenuePhaseDuration\"}},\"Function\":1},\"Name\":\"Avg(Facts - Forecast.RevenuePhaseDuration)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RevenuePhasePercentage\"}},\"Function\":1},\"Name\":\"Avg(Facts - Forecast.RevenuePhasePercentage)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"TotallineAmount\"}},\"Function\":1},\"Name\":\"Avg(Facts - Forecast.TotallineAmount)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"RevenuePhaseAmount\"}},\"Function\":0},\"Name\":\"Sum(Facts - Forecast.RevenuePhaseAmount)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Forecast Year\"},\"Name\":\"Dates - Forecast.Forecast Year\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"Forecast Date\"},\"Name\":\"Dates - Forecast.Forecast Date\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"OracleProjectNumber\"},\"Name\":\"Facts - Forecast.OracleProjectNumber\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Project Number\"},\"Name\":\"Dim - Order Details.Project Number\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Parent Line Number\"},\"Name\":\"Dim - Order Details.Parent Line Number\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 289.55,
+          "width": 1228.22,
+          "x": 51.77,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
