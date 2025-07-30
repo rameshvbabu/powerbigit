@@ -1,0 +1,32 @@
+table waitsHostName
+	lineageTag: d0ccccf8-67e1-40f7-99d8-f9816aba7f14
+
+	column hnID
+		dataType: int64
+		formatString: 0
+		lineageTag: fb1f7722-36b1-487a-91e9-979943434aad
+		summarizeBy: count
+		sourceColumn: hnID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HostName
+		dataType: string
+		lineageTag: 963c92fc-65ff-4e2a-abd9-d85b014c8f70
+		summarizeBy: none
+		sourceColumn: HostName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition waitsHostName-c2b59d35-6998-4089-be67-815662e3cf19 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("datahub-db.global.ul.com"),
+				    DBHealthHistory = Source{[Name="DBHealthHistory"]}[Data],
+				    dbo_waitsHostName = DBHealthHistory{[Schema="dbo",Item="waitsHostName"]}[Data]
+				in
+				    dbo_waitsHostName
+
+	annotation PBI_ResultType = Table
+
