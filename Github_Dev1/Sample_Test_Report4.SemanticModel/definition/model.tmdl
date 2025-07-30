@@ -1,0 +1,19 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["waitsHostName"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.112.1161.0 (22.12)
+
+ref table waitsHostName
+ref table DateTableTemplate_d08797e2-0087-463a-87d9-ebbcaabf935a
+
+ref cultureInfo en-US
+
