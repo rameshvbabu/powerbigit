@@ -1,0 +1,31 @@
+table test123
+	lineageTag: 164788b5-ca59-4bb9-9e76-5b6cf0e73f4f
+
+	column col1
+		dataType: string
+		lineageTag: f70b322d-ae56-4e75-8475-4a8a162e189b
+		summarizeBy: none
+		sourceColumn: col1
+
+		annotation SummarizationSetBy = Automatic
+
+	column col2
+		dataType: string
+		lineageTag: d6d89b4f-4c04-4897-a760-84ec64f25a7b
+		summarizeBy: none
+		sourceColumn: col2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition test123-ee360d6f-e793-4c3a-bb20-be0a486d8686 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("datahub-db.global.ul.com"),
+				    IT = Source{[Name="IT"]}[Data],
+				    dbo_test123 = IT{[Schema="dbo",Item="test123"]}[Data]
+				in
+				    dbo_test123
+
+	annotation PBI_ResultType = Table
+
